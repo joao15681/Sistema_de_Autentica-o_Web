@@ -1,0 +1,187 @@
+/* Reset Básico: Remove margens, espaçamentos padrão e aplica a fonte para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e borders não aumentem a largura total do elemento */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da Página: Define a cor escura de fundo e centraliza o card no meio da tela */
+body {
+    background-color: #121212;
+    min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+}
+
+/* Card Principal: Mantém os dois lados (banner e formulário) alinhados lado a lado */
+.login-container {
+    display: flex;
+    flex-direction: row; /* Coloca os elementos filhos em linha (horizontal) */
+    width: 900px;
+    height: 550px;       /* Altura fixa proporcional */
+    background-color: #0d0d0d;
+    border-radius: 24px;  /* Arredondamento das bordas externas */
+    padding: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6); /* Sombra suave escura ao redor do card */
+}
+
+/* Lado Esquerdo: Banner Vertical com imagem de fundo */
+.banner {
+    flex: 1;             /* Ocupa 50% da largura do container */
+    height: 100%;        /* Preenche toda a altura do card */
+    
+    background-image: url('image_login.jpg'); /* Carrega a imagem da paisagem */
+    background-size: cover;      /* Redimensiona a imagem para cobrir todo o espaço */
+    background-position: center; /* Centraliza o foco da imagem */
+    background-repeat: no-repeat;
+    
+    border-radius: 16px;  /* Arredondamento da imagem interna */
+    padding: 35px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Encosta o título na parte inferior do banner */
+}
+
+/* Estilização do texto do banner */
+.banner-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Destaque em negrito para a palavra envolvida pela tag <span> */
+.banner-title span {
+    font-weight: 700;
+}
+
+/* Lado Direito: Container do Formulário */
+.form-container {
+    flex: 1;             /* Ocupa os outros 50% da largura do container */
+    height: 100%;
+    padding: 40px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza os campos verticalmente */
+    color: #ffffff;
+}
+
+/* Título principal do formulário */
+.form-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Subtítulo discreto em tom cinza */
+.subtitle {
+    color: #888888;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* Agrupador de rótulo e campo de texto */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+/* Estilização do texto dos rótulos (labels) */
+.input-group label {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #cccccc;
+}
+
+/* Estilização dos campos de digitação */
+.input-group input {
+    background-color: #222222;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none; /* Remove a borda azul/padrão do navegador */
+    transition: border-color 0.3s; /* Transição suave ao clicar no campo */
+}
+
+/* Altera a cor da borda para amarelo quando o usuário clica no campo */
+.input-group input:focus {
+    border-color: #ffc107;
+}
+
+/* Estilização do texto explicativo temporário dentro dos campos */
+.input-group input::placeholder {
+    color: #555555;
+}
+
+/* Bloco do Checkbox "Lembrar-se" */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+/* Estilização do quadrado do checkbox */
+.remember-me input[type="checkbox"] {
+    accent-color: #ffc107; /* Define a cor amarela quando marcado */
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* Rótulo do checkbox */
+.remember-me label {
+    font-size: 13px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+
+/* Botão Amarelo de Ação */
+.btn-login {
+    width: 100%;
+    background-color: #ffc107;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Efeito ao passar o ponteiro do mouse sobre o botão (escurece o amarelo) */
+.btn-login:hover {
+    background-color: #e0a800;
+}
+
+/* Efeito ao clicar no botão (simula clique diminuindo levemente o tamanho) */
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+/* Texto de rodapé para alternar para a tela de cadastro */
+.signup-text {
+    text-align: center;
+    font-size: 13px;
+    color: #888888;
+    margin-top: 22px;
+}
+
+/* Estilização do link de redirecionamento */
+.signup-text a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sublinha o link quando o mouse passa por cima */
+.signup-text a:hover {
+    text-decoration: underline;
+}

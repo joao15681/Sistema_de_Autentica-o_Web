@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Define a linguagem do documento como português do Brasil -->
+<html lang="pt-br">
+    <head>
+        <!-- Define a codificação de caracteres para aceitar acentos e ç -->
+        <meta charset="UTF-8">
+        <!-- Ajusta a escala da página para responder bem a dispositivos móveis -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Título que aparece na aba do navegador -->
+        <title>Login</title>
+        <!-- Importa o arquivo de estilos CSS específico do login -->
+        <link rel="stylesheet" href="login.css">
+    </head>
+
+    <body>
+
+        <!-- Container principal que segura o layout do card -->
+        <div class="login-container">
+
+            <!-- Lado esquerdo: Banner visual com imagem de fundo -->
+            <div class="banner">
+                <!-- Título do banner com destaque em parte do texto via <span> -->
+                <h1 class="banner-title">Faça Parte de<br>Algo <span>Maior</span></h1>
+            </div>
+
+            <!-- Lado direito: Área do formulário e textos -->
+            <div class="form-container">
+                <!-- Título do formulário -->
+                <h2>Login</h2>
+                <!-- Subtítulo explicativo -->
+                <p class="subtitle">Entre com suas credenciais para acessar sua conta</p>
+
+                <!-- Formulário que envia os dados via método POST para o script login.php -->
+                <form action="login.php" method="POST">
+                    <!-- Campo para inserção do e-mail -->
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <!-- Input do tipo email força a validação básica de sintaxe de e-mail no navegador -->
+                        <input type="email" id="email" name="email" placeholder="email@email.com" required>
+                    </div>
+
+                    <!-- Campo para inserção da senha -->
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <!-- Input do tipo password oculta os caracteres digitados por privacidade -->
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>      
+                    </div>
+
+                    <!-- Caixa de seleção "Lembrar-se" -->
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Lembrar-se </label>
+                    </div>
+
+                    <!-- Botão de envio do formulário -->
+                    <button type="submit" class="btn-login">Login</button>
+                </form>
+
+                <!-- Link de navegação para usuários que ainda não possuem cadastro -->
+                <p class="signup-text">
+                    Não tem Login? <a href="sign.html">Cria sua conta</a>
+                </p>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Define a linguagem do documento como português do Brasil -->
+<html lang="pt-br">
+    <head>
+        <!-- Codificação de caracteres para suportar acentuação -->
+        <meta charset="UTF-8">
+        <!-- Responsividade para telas de dispositivos móveis -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Título da aba da página -->
+        <title>Cadastre-se</title>
+        <!-- Importa o arquivo de folha de estilos CSS do cadastro -->
+        <link rel="stylesheet" href="sign.css">
+    </head>
+
+    <body>
+
+        <!-- Container do card de cadastro -->
+        <div class="sign-container">
+
+            <!-- Lado Esquerdo: Banner Vertical com a imagem de cadastro -->
+            <div class="banner">
+                <h1 class="banner-title">O Primeiro Passo<br>para <span>Algo Maior</span></h1>
+            </div>
+
+            <!-- Lado Direito: Formulário de Cadastro -->
+            <div class="form-container">
+                <h2>Cadastre-se</h2>
+                <p class="subtitle">Digite seus dados para se Cadastrar</p>
+
+                <!-- Formulário que envia os dados digitados para o script sign.php via POST -->
+                <form action="sign.php" method="POST">
+
+                    <!-- Campo para o nome completo do usuário -->
+                    <div class="input-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                    </div>
+
+                    <!-- Campo para o e-mail -->
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="email@email.com" required>
+                    </div>
+
+                    <!-- Campo para a criação de senha -->
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>      
+                    </div>
+
+                    <!-- Botão de envio para registrar a conta -->
+                    <button type="submit" class="btn-login">Cadastrar</button>
+                </form>
+
+                <!-- Link para usuários que já possuem conta e desejam ir para o login -->
+                <p class="signup-text">
+                    Já tem uma conta? <a href="login.html">Faça o Login</a>
+                </p>
+
+            </div>
+        </div>
+
+    </body>
+</html>
